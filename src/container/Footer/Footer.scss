@@ -27,7 +27,7 @@
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
-    background: linear-gradient(to top, #1b23b2, #8016c7);
+    background: linear-gradient(#1C1C1E, #2C2C3C);
 
     transition: all 0.3s ease-in-out;
 
@@ -79,7 +79,7 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color);
+      background-color: var(--gray-color);
 
       font-family: var(--font-base);
       color: var(--secondary-color);
@@ -99,7 +99,7 @@
     padding: 1rem 2rem;
     border-radius: 10px;
     border: none;
-    background: linear-gradient(#1b23b2, #8016c7);
+    background: linear-gradient(#1C1C1E, #2C2C3C);
     border: 0.5px solid white;
     font-weight: 500;
     color: var(--white-color);

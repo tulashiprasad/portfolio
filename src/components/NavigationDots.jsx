@@ -1,19 +1,22 @@
 import React from "react";
 
-const NavigationDots = (active) => {
+const NavigationDots = ({ active }) => {
   return (
-      <div className="app__navigation">
-          
-      {["home", "about", "work", "skills", "contact"].map((item,index) => (
+    <div className="app__navigation">
+      {["home", "about", "education", "projects", "skills and experience", "contact"].map((item, index) => {
+        const isActive = active === item || item.includes("skills") && active === "skills";
+        return (
+          // eslint-disable-next-line jsx-a11y/anchor-has-content
           <a
-              href={`#${item}`}
-              className="app__navigation-dot"
-              key = {item + index}
-              style = {active === item ? {bakgroundColor: '#313bac'} : {}}
+            href={`#${item === "skills and experience" ? "skills" : item}`}
+            className="app__navigation-dot"
+            key={item + index}
+            style={isActive ? { backgroundColor: "#313bac" } : {}}
           />
-
-      ))}
+        );
+      })}
     </div>
+
   );
 };
 

@@ -1,10 +1,10 @@
-.app__skills {
+.app__education {
     flex: 1;
     width: 100%;
     flex-direction: column;
   }
   
-  .app__skills-container {
+  .app__education-container {
     width: 80%;
     margin-top: 3rem;
   
@@ -17,7 +17,7 @@
     }
   }
   
-  .app__skills-list {
+  .app__education-list {
     flex: 1;
     display: flex;
     flex-wrap: wrap;
@@ -33,18 +33,19 @@
     }
   }
   
-  .app__skills-item {
-    flex-direction: column;
+  .app__education-item {
+    flex-direction: row;
     text-align: center;
-  
+    gap: 2rem;
     margin: 1rem;
   
     transition: all 0.3s ease-in-out;
   
     div {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
+      width: 500px !important;
+      height: auto;
+      padding: 3rem;
+      border-radius: 5px;
       background: linear-gradient(#1C1C1E, #2C2C3C);;
       box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.6);
 
@@ -54,9 +55,6 @@
         height: 50%;
       }
   
-      &:hover {
-        box-shadow: 0 0 25px #fef4f5;
-      }
   
       @media screen and (min-width: 2000px) {
         width: 150px;
@@ -69,9 +67,23 @@
       }
     }
   
+    .education-date{
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        text-align: left;
+        font-size: .8rem;
+        color: #b2b2b2;
+      }
+      .degree {
+        color: #b2b2b2;
+        font-style: italic;
+        font-size: .9rem;
+      }
     p {
       font-weight: 500;
       margin-top: 0.5rem;
+      font-size: 1rem;
     }
   
     @media screen and (min-width: 2000px) {
@@ -81,9 +93,12 @@
         margin-top: 1rem;
       }
     }
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
   }
   
-  .app__skills-exp {
+  .app__education-exp {
     flex: 1;
     display: flex;
     justify-content: flex-start;
@@ -95,7 +110,7 @@
     }
   }
   
-  .app__skills-exp-item {
+  .app__education-exp-item {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -104,10 +119,10 @@
     margin: 1rem 0;
   }
   
-  .app__skills-exp-works {
+  .app__education-exp-works {
     flex: 1;
   
-    .app__skills-exp-work {
+    .app__education-exp-work {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -127,7 +142,7 @@
     }
   }
   
-  .app__skills-exp-year {
+  .app__education-exp-year {
     margin-right: 3rem;
   
     p {
@@ -139,7 +154,7 @@
     }
   }
   
-  .skills-tooltip {
+  .education-tooltip {
     max-width: 300px !important;
     background-color: var(--white-color) !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;

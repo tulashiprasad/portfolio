@@ -1,6 +1,6 @@
 #home {
   position: relative;
-  background: radial-gradient(#1b23b2, #8016c7);
+  background: linear-gradient(#1C1C1E, #2C2C3C);;
 
   background-size: cover;
   background-repeat: repeat;
@@ -57,7 +57,7 @@
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;
-    background: linear-gradient(#1b23b2, #8016c7);
+    background: linear-gradient(#1C1C1E, #2C2C3C);
     border-radius: 15px;
     width: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -65,11 +65,13 @@
   .tag-cmp {
     flex-direction: column;
     margin-top: 3rem;
-
+    width: max-content;
+    font-weight: bold;
     p {
-      widows: 100%;
+      width: 100%;
       text-transform: uppercase;
-      text-align: right;
+      text-align: left;
+      text-spacing-trim: space-all;
     }
   }
   span {
@@ -80,82 +82,23 @@
     align-items: flex-start;
   }
 }
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hobby {
+  align-items: center;
+  justify-content: center !important;
+}
+.hobby-item {
+  // border-radius: 5px !important ;
 }
 .app__header-circles {
   flex: 0.75;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   margin-left: 1rem;
+  margin-top:20rem;
   height: 100%;
-
-  div {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: radial-gradient(#1b23b2, #8016c7);
-    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.6);
-
-    img {
-      animation: rotation 5s infinite linear;
-      width: 60%;
-      height: 60%;
-    }
+  color: lightgray;
+  p{
+    color: lightgray;
   }
-
-  div:nth-child(1) {
-    transform: translateX(-90px);
-    width: 100px;
-    height: 100px;
-    @media screen and (max-width: 1200px) {
-      transform: translateX(90px);
-    }
-  }
-  div:nth-child(2) {
-    margin-left: 1.75rem;
-    width: 100px;
-    height: 100px;
-    @media screen and (max-width: 1200px) {
-      transform: translateX(-100px);
-    }
-  }
-  div:nth-child(3) {
-    transform: translateX(25px);
-    width: 100px;
-    height: 100px;
-    @media screen and (max-width: 1200px) {
-      transform: translateX(90px);
-    }
-  }
-  div:nth-child(4) {
-    transform: translateX(-50px);
-    width: 100px;
-    height: 100px;
-    @media screen and (max-width: 1200px) {
-      transform: translateX(-100px);
-      margin-bottom: 10px;
-    }
-  }
-  @media screen and (min-width: 2000px) {
-    div:nth-child(1) {
-      width: 400px;
-      height: 400px;
-    }
-    div:nth-child(2) {
-      width: 170px;
-      height: 170px;
-    }
-    div:nth-child(3) {
-      width: 20px;
-      height: 20px;
-    }
+  
     @media screen and (max-width: 1200px) {
       width: 100%;
       flex-direction: row;
@@ -166,7 +109,6 @@
       }
     }
   }
-}
 .app__header-img {
   flex: 1;
   height: 100%;

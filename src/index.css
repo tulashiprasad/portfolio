@@ -4,12 +4,12 @@
   --font-base: "DM Sans", sans-serif;
 
   --primary-color: #edf2f8;
-  --secondary-color: #313bac;
+  --secondary-color: #3F3F55;
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #d1d8e3;
   --brown-color: #46364a;
-  --white-color: #ffffff;
+  --white-color: lightgray;
   --hover-color: #3af200;
   --linear-grad:
 }

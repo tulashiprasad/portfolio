@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+build
+backend_sanity/node_modules
+backend_sanity/dist

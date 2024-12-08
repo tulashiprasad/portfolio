@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./Header.scss";
 import { images } from "../../constants";
 import AppWrap from "../../wrapper/AppWrap";
+import { urlFor, client } from "../../client";
 
 const Header = () => {
+  const [profile, setProfile] = useState([]);
+  const [bio, setBio] = useState([]);
+  const [hobbies, setHobbies] = useState([]);
+
   const scaleVariants = {
     whileInView: {
       scale: [0, 1],
@@ -15,6 +20,26 @@ const Header = () => {
       },
     },
   };
+
+  useEffect(() => {
+    const profileQuery = '*[_type == "profile"]';
+    const bioQuery = '*[_type == "bio"]';
+    const hobbyQuery = '*[_type =="hobbies"]';
+
+    client.fetch(profileQuery).then((data) => {
+      setProfile(data);
+    });
+    client.fetch(bioQuery).then((data) => {
+      setBio(data);
+    });
+    client.fetch(hobbyQuery).then((data) => {
+      setHobbies(data);
+    });
+  }, []);
+
+  useEffect(() => {
+
+  }, []);
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -30,11 +55,22 @@ const Header = () => {
               <h1 className="head-text">Tulashi Pd Joshi</h1>
             </div>
           </div>
-          <div className="tag-cmp app__flex">
-            <p className="p-text">Engineer</p>
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Frelancer</p>
-          </div>
+          {bio.map((bio) => {
+            return (
+              <>
+                <div className="tag-cmp app__flex">
+                  <p className="p-text">{bio.bio1}dksjfk</p>
+                </div>
+                <div className="tag-cmp app__flex">
+                  <p className="p-text">{bio.bio2}fasdfasd</p>
+                </div>
+                <div className="tag-cmp app__flex">
+                  <p className="p-text">{bio.bio3}fasdfasdf</p>
+                </div>
+              </>
+            );
+          })}
+
         </div>
       </motion.div>
 
@@ -43,7 +79,12 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        {profile.map((item) => {
+          return (
+            <img src={urlFor(item.imgUrl)} alt="app__header-img" />
+
+          );
+        })}
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -54,17 +95,28 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        variant={scaleVariants}
-        whileInView = {scaleVariants.whileInView}
-        className="app__header-circles"
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className="app__header-info hobby"
       >
-        {[images.react, images.html, images.javascript, images.css].map(
-          (circle, index) => (
-            <div className="circle-cmp app__flex" key={`circle-${index}`}>
-              <img src={circle} alt="circle" />
-            </div>
-          )
-        )}
+        <div className="app__header-badge">
+          {hobbies.map((hobby) => {
+            return (
+              <>
+                <div className="tag-cmp app__flex hobby-item">
+                  <p className="p-text">{hobby.hobby1}</p>
+                </div>
+                <div className="tag-cmp app__flex hobby-item">
+                  <p className="p-text">{hobby.hobby2}</p>
+                </div>
+                <div className="tag-cmp app__flex hobby-item">
+                  <p className="p-text">{hobby.hobby3}</p>
+                </div>
+              </>
+            );
+          })}
+
+        </div>
       </motion.div>
     </div>
   );
