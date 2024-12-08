@@ -9,6 +9,16 @@ export default{
             type:'string'
         },
         {
+            name:'date',
+            title:'Date',
+            type:'string'
+        },
+        {
+            name:'degree',
+            title:'Degree',
+            type:'string'
+        },
+        {
             name:'bgColor',
             title:'BgColor',
             type:'string'

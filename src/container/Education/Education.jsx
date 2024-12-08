@@ -35,8 +35,8 @@ const Education = () => {
               </div>
               <div className="education-date">
                 <p className="p-text" style={{ fontWeight: "bold" }}>{education.institution}</p>
-                <p className="p-text degree">BE Electronics Communication and Information Engineering</p>
-                <p>2018 - 2022 </p>
+                <p className="p-text degree">{education.degree}</p>
+                <p>{education.date}</p>
               </div>
             </motion.div>
           ))}

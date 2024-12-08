@@ -59,13 +59,13 @@ const Header = () => {
             return (
               <>
                 <div className="tag-cmp app__flex">
-                  <p className="p-text">{bio.bio1}dksjfk</p>
+                  <p className="p-text">{bio.bio1}</p>
                 </div>
                 <div className="tag-cmp app__flex">
-                  <p className="p-text">{bio.bio2}fasdfasd</p>
+                  <p className="p-text">{bio.bio2}</p>
                 </div>
                 <div className="tag-cmp app__flex">
-                  <p className="p-text">{bio.bio3}fasdfasdf</p>
+                  <p className="p-text">{bio.bio3}</p>
                 </div>
               </>
             );
@@ -99,7 +99,7 @@ const Header = () => {
         transition={{ duration: 0.5 }}
         className="app__header-info hobby"
       >
-        <div className="app__header-badge">
+        <div className="app__header-badge hobby_flex">
           {hobbies.map((hobby) => {
             return (
               <>

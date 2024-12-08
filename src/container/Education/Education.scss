@@ -1,173 +1,179 @@
 .app__education {
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .app__education-container {
-    width: 80%;
-    margin-top: 3rem;
-  
-    display: flex;
-    flex-direction: row;
-  
-    @media screen and (max-width: 900px) {
-      width: 100%;
-      flex-direction: column;
-    }
-  }
-  
-  .app__education-list {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-  
-    margin-right: 5rem;
-  
-    @media screen and (max-width: 900px) {
-      margin-right: 0;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  
-  .app__education-item {
-    flex-direction: row;
-    text-align: center;
-    gap: 2rem;
-    margin: 1rem;
-  
-    transition: all 0.3s ease-in-out;
-  
-    div {
-      width: 500px !important;
-      height: auto;
-      padding: 3rem;
-      border-radius: 5px;
-      background: linear-gradient(#1C1C1E, #2C2C3C);;
-      box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.6);
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
 
-  
-      img {
-        width: 50%;
-        height: 50%;
-      }
-  
-  
-      @media screen and (min-width: 2000px) {
-        width: 150px;
-        height: 150px;
-      }
-  
-      @media screen and (max-width: 450px) {
-        width: 70px;
-        height: 70px;
-      }
-    }
-  
-    .education-date{
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        text-align: left;
-        font-size: .8rem;
-        color: #b2b2b2;
-      }
-      .degree {
-        color: #b2b2b2;
-        font-style: italic;
-        font-size: .9rem;
-      }
-    p {
-      font-weight: 500;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-    }
-  
-    @media screen and (min-width: 2000px) {
-      margin: 1rem 2rem;
-  
-      p {
-        margin-top: 1rem;
-      }
-    }
-    @media screen and (max-width: 900px) {
-      flex-direction: column;
-    }
-  }
-  
-  .app__education-exp {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-  
-    @media screen and (max-width: 900px) {
-      margin-top: 2rem;
-    }
-  }
-  
-  .app__education-exp-item {
+.app__education-container {
+  width: 80%;
+  margin-top: 3rem;
+
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 900px) {
     width: 100%;
+    flex-direction: column;
+  }
+}
+
+.app__education-list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-right: 5rem;
+
+  @media screen and (max-width: 900px) {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.app__education-item {
+  flex-direction: row;
+  text-align: center;
+  gap: 2rem;
+  margin: 1rem;
+
+  transition: all 0.3s ease-in-out;
+
+  div {
+    width: 350px !important;
+    height: auto;
+    padding: 3rem;
+    border-radius: 5px;
+    background: linear-gradient(#1c1c1e, #2c2c3c);
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.6);
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 70px;
+      padding: 1rem;
+    }
+  }
+
+  .education-date {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #b2b2b2;
+  }
+  .degree {
+    color: #b2b2b2;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+  p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+
+  @media screen and (min-width: 2000px) {
+    margin: 1rem 2rem;
+
+    p {
+      margin-top: 1rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    .education-date p {
+      // width: 350px !important;
+      // background-color: red;
+      text-align: center;
+    }
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
+.app__education-exp {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 2rem;
+  }
+}
+
+.app__education-exp-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.app__education-exp-works {
+  flex: 1;
+
+  .app__education-exp-work {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 1rem 0;
-  }
-  
-  .app__education-exp-works {
-    flex: 1;
-  
-    .app__education-exp-work {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      cursor: pointer;
-  
-      h4 {
-        font-weight: 500;
-      }
-  
-      p {
-        font-weight: 400;
-        color: var(--gray-color);
-        margin-top: 5px;
-      }
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    h4 {
+      font-weight: 500;
     }
-  }
-  
-  .app__education-exp-year {
-    margin-right: 3rem;
-  
+
     p {
-      font-weight: 800;
-    }
-  
-    @media screen and (max-width: 450px) {
-      margin-right: 1rem;
+      font-weight: 400;
+      color: var(--gray-color);
+      margin-top: 5px;
     }
   }
-  
-  .education-tooltip {
-    max-width: 300px !important;
-    background-color: var(--white-color) !important;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 5px !important;
-    padding: 1rem !important;
-    color: var(--gray-color) !important;
-    text-align: center !important;
-    line-height: 1.5 !important;
-    opacity: 1 !important;
-  
-    @media screen and (min-width: 2000px) {
-      font-size: 1.75rem !important;
-      max-width: 500px !important;
-      line-height: 2 !important;
-    }
+}
+
+.app__education-exp-year {
+  margin-right: 3rem;
+
+  p {
+    font-weight: 800;
   }
+
+  @media screen and (max-width: 450px) {
+    margin-right: 1rem;
+  }
+}
+
+.education-tooltip {
+  max-width: 300px !important;
+  background-color: var(--white-color) !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+  padding: 1rem !important;
+  color: var(--gray-color) !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem !important;
+    max-width: 500px !important;
+    line-height: 2 !important;
+  }
+}

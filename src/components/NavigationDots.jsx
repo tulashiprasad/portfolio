@@ -11,7 +11,7 @@ const NavigationDots = ({ active }) => {
             href={`#${item === "skills and experience" ? "skills" : item}`}
             className="app__navigation-dot"
             key={item + index}
-            style={isActive ? { backgroundColor: "#313bac" } : {}}
+            style={isActive ? { backgroundColor: "#3af200" } : {}}
           />
         );
       })}

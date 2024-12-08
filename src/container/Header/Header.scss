@@ -1,6 +1,6 @@
 #home {
   position: relative;
-  background: linear-gradient(#1C1C1E, #2C2C3C);;
+  background: linear-gradient(#1c1c1e, #2c2c3c);
 
   background-size: cover;
   background-repeat: repeat;
@@ -33,6 +33,13 @@
     padding: 6rem 1rem 2rem;
   }
 }
+.hobby_flex {
+  @media screen and (max-width: 900px) {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+}
 .app__header-info {
   flex: 0.65;
   display: flex;
@@ -57,7 +64,7 @@
   .badge-cmp,
   .tag-cmp {
     padding: 1rem 2rem;
-    background: linear-gradient(#1C1C1E, #2C2C3C);
+    background: linear-gradient(#1c1c1e, #2c2c3c);
     border-radius: 15px;
     width: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -65,13 +72,15 @@
   .tag-cmp {
     flex-direction: column;
     margin-top: 3rem;
-    width: max-content;
     font-weight: bold;
     p {
       width: 100%;
       text-transform: uppercase;
       text-align: left;
       text-spacing-trim: space-all;
+    }
+    @media screen and (max-width: 900px) {
+      margin-top: 1rem;
     }
   }
   span {
@@ -86,29 +95,27 @@
   align-items: center;
   justify-content: center !important;
 }
-.hobby-item {
-  // border-radius: 5px !important ;
-}
+
 .app__header-circles {
   flex: 0.75;
   margin-left: 1rem;
-  margin-top:20rem;
+  margin-top: 20rem;
   height: 100%;
   color: lightgray;
-  p{
+  p {
     color: lightgray;
   }
-  
-    @media screen and (max-width: 1200px) {
-      width: 100%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-left: 0;
-      div {
-        margin: 1rem;
-      }
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    div {
+      margin: 1rem;
     }
   }
+}
 .app__header-img {
   flex: 1;
   height: 100%;
