@@ -9,7 +9,7 @@ const Education = () => {
   const [education, setEducation] = useState([]);
 
   useEffect(() => {
-    const educationQuery = '*[_type == "education"]';
+    const educationQuery = '*[_type == "education"] | order(_createdAt desc)';
     client.fetch(educationQuery).then((data) => {
       setEducation(data);
     });

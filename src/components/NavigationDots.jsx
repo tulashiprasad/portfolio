@@ -3,7 +3,8 @@ import React from "react";
 const NavigationDots = ({ active }) => {
   return (
     <div className="app__navigation">
-      {["home", "about", "education", "projects", "skills and experience", "contact"].map((item, index) => {
+      {["home", "about", "education", "projects", "skills and experience","testimonial", "contact"].map((item, index) => {
+        // eslint-disable-next-line no-mixed-operators
         const isActive = active === item || item.includes("skills") && active === "skills";
         return (
           // eslint-disable-next-line jsx-a11y/anchor-has-content

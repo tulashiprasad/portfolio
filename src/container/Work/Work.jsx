@@ -9,7 +9,7 @@ const Work = () => {
   const [work, setWork] = useState([]);
 
   useEffect(() => {
-    const workQuery = '*[_type == "works"]';
+    const workQuery = '*[_type == "works"] | order(_createdAt desc)';
     client.fetch(workQuery).then((data) => {
       setWork(data);
     });

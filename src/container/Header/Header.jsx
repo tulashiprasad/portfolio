@@ -23,8 +23,8 @@ const Header = () => {
 
   useEffect(() => {
     const profileQuery = '*[_type == "profile"]';
-    const bioQuery = '*[_type == "bio"]';
-    const hobbyQuery = '*[_type =="hobbies"]';
+    const bioQuery = '*[_type == "bio"] | order(_createdAt desc)';
+    const hobbyQuery = '*[_type =="hobbies"] | order(_createdAt desc)';
 
     client.fetch(profileQuery).then((data) => {
       setProfile(data);
