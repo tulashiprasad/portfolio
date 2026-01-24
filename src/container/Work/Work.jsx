@@ -18,7 +18,7 @@ const Work = () => {
     <>
 
       <div className="app__work-container">
-        <h2 className="head-text">My <span> projects </span>
+        <h2 className="head-text">My <span> experience </span>
         </h2>
         <motion.div className="app__work-list">
           {work.map((work, index) => (

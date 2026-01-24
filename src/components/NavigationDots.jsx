@@ -1,9 +1,10 @@
 import React from "react";
+import { navigationItems } from "../constants";
 
 const NavigationDots = ({ active }) => {
   return (
     <div className="app__navigation">
-      {["home", "about", "education", "projects", "skills and experience","testimonial", "contact"].map((item, index) => {
+      {navigationItems.map((item, index) => {
         // eslint-disable-next-line no-mixed-operators
         const isActive = active === item || item.includes("skills") && active === "skills";
         return (
@@ -12,7 +13,7 @@ const NavigationDots = ({ active }) => {
             href={`#${item === "skills and experience" ? "skills" : item}`}
             className="app__navigation-dot"
             key={item + index}
-            style={isActive ? { backgroundColor: "#3af200" } : {}}
+            style={isActive ? { backgroundColor: "var(--accent-primary)", boxShadow: "var(--shadow-glow)", transform: "scale(1.3)", borderColor: "var(--accent-glow)" } : {}}
           />
         );
       })}

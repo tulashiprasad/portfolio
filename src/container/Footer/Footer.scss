@@ -22,14 +22,16 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-
     margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 10px;
+    padding: 1.25rem;
+    border-radius: 15px;
     cursor: pointer;
-    background: linear-gradient(#1C1C1E, #2C2C3C);
-
-    transition: all 0.3s ease-in-out;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
 
     img {
       width: 40px;
@@ -38,14 +40,25 @@
     }
 
     p {
-      font-weight: 500;
+      font-weight: 600;
+      color: var(--gray-light);
     }
+
     a {
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
+      color: var(--gray-light);
     }
+
     &:hover {
-      box-shadow: 0 0 10px #fef4f5;
+      box-shadow: var(--shadow-glow-hover);
+      border-color: var(--accent-primary);
+      transform: translateY(-4px);
+
+      p,
+      a {
+        color: var(--white-color);
+      }
     }
 
     @media screen and (max-width: 450px) {
@@ -65,25 +78,29 @@
 
   div {
     width: 100%;
-
     margin: 0.75rem 0;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    background-color: var(--gray-color);
-
-    transition: all 0.3s ease-in-out;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    transition: all var(--transition-base);
 
     input,
     textarea {
       width: 100%;
       padding: 0.95rem;
       border: none;
-      border-radius: 7px;
-      background-color: var(--gray-color);
-
+      border-radius: 12px;
+      background: transparent;
       font-family: var(--font-base);
-      color: var(--secondary-color);
+      color: var(--white-color);
       outline: none;
+
+      &::placeholder {
+        color: var(--gray-dark);
+      }
     }
 
     textarea {
@@ -91,27 +108,31 @@
     }
 
     &:hover {
-      box-shadow: 0 0 5px var(--primary-color);
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-glow);
     }
   }
 
   button {
     padding: 1rem 2rem;
-    border-radius: 10px;
+    border-radius: 12px;
     border: none;
-    background: linear-gradient(#1C1C1E, #2C2C3C);
-    border: 0.5px solid white;
-    font-weight: 500;
+    background: var(--gradient-primary);
+    font-weight: 600;
     color: var(--white-color);
     outline: none;
     margin: 2rem 0 0 0;
     font-family: var(--font-base);
-
-    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition: all var(--transition-base);
     cursor: pointer;
+    box-shadow: var(--shadow-md);
+    letter-spacing: 0.05em;
 
     &:hover {
-      background-color: #2430af;
+      background: var(--bg-darker);
+      border: 1px solid var(--accent-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow-hover);
     }
   }
 

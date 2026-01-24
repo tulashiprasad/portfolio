@@ -27,10 +27,7 @@ const Education = () => {
               className="app__education-item app__flex"
               key={education.name}
             >
-              <div
-                className="app__flex"
-                style={{ backgroundColor: education.bgColor }}
-              >
+              <div className="app__flex">
                 <img src={urlFor(education.icon)} alt={education.name} />
               </div>
               <div className="education-date">

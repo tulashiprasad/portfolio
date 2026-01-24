@@ -45,9 +45,19 @@
     width: 350px !important;
     height: auto;
     padding: 3rem;
-    border-radius: 5px;
-    background: linear-gradient(#1c1c1e, #2c2c3c);
-    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-glow-hover);
+      border-color: var(--accent-primary);
+    }
 
     img {
       width: 50%;
@@ -70,18 +80,23 @@
     border: none;
     box-shadow: none;
     text-align: left;
-    font-size: 0.8rem;
-    color: #b2b2b2;
-  }
-  .degree {
-    color: #b2b2b2;
-    font-style: italic;
-    font-size: 0.9rem;
-  }
-  p {
+    font-size: 0.85rem;
+    color: var(--gray-color);
     font-weight: 500;
+  }
+
+  .degree {
+    color: var(--gray-light);
+    font-style: italic;
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 600;
     margin-top: 0.5rem;
     font-size: 1rem;
+    color: var(--white-color);
   }
 
   @media screen and (min-width: 2000px) {
@@ -91,8 +106,10 @@
       margin-top: 1rem;
     }
   }
+
   @media screen and (max-width: 900px) {
     flex-direction: column;
+
     .education-date p {
       // width: 350px !important;
       // background-color: red;
@@ -104,6 +121,7 @@
     box-shadow: none !important;
   }
 }
+
 .app__education-exp {
   flex: 1;
   display: flex;
@@ -162,11 +180,14 @@
 
 .education-tooltip {
   max-width: 300px !important;
-  background-color: var(--white-color) !important;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-  border-radius: 5px !important;
+  background-color: var(--bg-card) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--shadow-xl) !important;
+  border-radius: 12px !important;
   padding: 1rem !important;
-  color: var(--gray-color) !important;
+  color: var(--gray-light) !important;
   text-align: center !important;
   line-height: 1.5 !important;
   opacity: 1 !important;
